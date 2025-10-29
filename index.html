@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jathir Rubio — Portfolio</title>
+  <meta name="description" content="Portafolio personal de Jathir Rubio: proyectos, CV y blog." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: #0f131a;
+      --muted: #9aa3af;
+      --text: #e5e7eb;
+      --accent: #60a5fa; /* azul suave */
+      --ring: rgba(96,165,250,.4);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --maxw: 960px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.12), transparent 60%),
+                  radial-gradient(800px 400px at 10% -10%, rgba(34,197,94,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ====== Layout ====== */
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* ====== Navbar ====== */
+    .nav {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(160%) blur(8px);
+      background: rgba(11,13,18,.6);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .brand { font-weight:700; letter-spacing:.2px; }
+    .nav ul { list-style:none; display:flex; gap:18px; padding:0; margin:0; }
+    .nav a { color: var(--text); opacity:.9; }
+
+    /* ====== Hero ====== */
+    .hero { padding: 72px 0 48px; }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.15; margin:0 0 12px; }
+    .hero p { color: var(--muted); margin: 0 0 22px; }
+    .hero-cta { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:11px 16px; border-radius: 12px; border:1px solid rgba(255,255,255,.09);
+           background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); color: var(--text); box-shadow: var(--shadow);
+    }
+    .btn.primary { background: linear-gradient(180deg, rgba(96,165,250,.25), rgba(96,165,250,.15)); border-color: rgba(96,165,250,.35); }
+
+    /* ====== Cards ====== */
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+    .card { grid-column: span 12; background: var(--card); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding:20px; box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    @media (min-width: 720px) {
+      .card { grid-column: span 6; }
+    }
+
+    /* ====== Section titles ====== */
+    .section { padding: 26px 0 18px; }
+    .section h2 { font-size: 22px; letter-spacing:.2px; margin: 0 0 10px; }
+    .section .sub { color: var(--muted); margin-top: 0; }
+
+    /* ====== Footer ====== */
+    footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 18px 0 48px; color: var(--muted); }
+
+    /* ====== Small niceties ====== */
+    .pill { display:inline-block; padding:4px 10px; border-radius: 999px; background: rgba(96,165,250,.12); border:1px solid rgba(96,165,250,.3); color: var(--accent); font-size: 12px; }
+    .list { display:flex; flex-wrap: wrap; gap: 8px 12px; padding:0; margin:0; list-style:none; }
+    .list li { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">Jathir Rubio</div>
+      <nav>
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="./cv.pdf" target="_blank" rel="noopener">curriculum vitae</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="home">
+      <span class="pill">bienvenido</span>
+      <h1>Pequeño rincón en internet para mis proyectos de mecatrónica, software y notas.</h1>
+      <p>
+        Ingeniero en Mecatrónica. Trabajo con Python, C/C++, React, control de motores, visión por computadora y reconstrucción 3D con drones.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#projects">Ver proyectos</a>
+        <a class="btn" href="#about">Sobre mí</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="sub">Breve presentación + enlaces destacados.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>¿Quién soy?</h3>
+          <p>Soy Jathir Rubio. Me apasionan la ingeniería, el desarrollo de software, la IA y la visualización científica. Me gusta construir sistemas elegantes y bien documentados.</p>
+        </article>
+        <article class="card">
+          <h3>Especialidades</h3>
+          <ul class="list">
+            <li>Python, MATLAB, C/C++</li>
+            <li>React + TypeScript</li>
+            <li>Control (Dahlin, Deadbeat)</li>
+            <li>CAD/CAM &amp; 3D (Blender, Meshroom)</li>
+            <li>Procesamiento de señales</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <p class="sub">Algunos trabajos y experimentos recientes.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Volumetría con drones</h3>
+          <p>Reconstrucción 3D de objetos irregulares con SAM, COLMAP/Meshroom y cálculo de volumen a partir de nubes de puntos.</p>
+        </article>
+        <article class="card">
+          <h3>Control de motor con Dahlin</h3>
+          <p>Identificación con PRBS y diseño discreto del controlador. Telemetría vía HC‑06 y visualización en MATLAB.</p>
+        </article>
+        <article class="card">
+          <h3>LogLife</h3>
+          <p>App de productividad en Python + PyQt6: hábitos, dashboards y resúmenes semanales.</p>
+        </article>
+        <article class="card">
+          <h3>Portafolio React + Vite</h3>
+          <p>Plantilla modular con Tailwind, rutas y despliegue automático en GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <h2>Blog</h2>
+      <p class="sub">Notas cortas (WIP). Puedes enlazar posts de Medium, Notion o Markdown estáticos.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Reynolds Transport Theorem</h3>
+          <p>Intuición de términos de acumulación y flujo en sistemas abiertos vs. cerrados.</p>
+        </article>
+        <article class="card">
+          <h3>STM32: pull‑up, pull‑down y push‑pull</h3>
+          <p>Guía práctica para elegir el modo correcto de GPIO con ejemplos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> · Hecho con ❤ por Jathir Rubio</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
