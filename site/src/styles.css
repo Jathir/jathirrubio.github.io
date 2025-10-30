@@ -7,7 +7,7 @@
   --ring: rgba(96,165,250,.4);
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius: 18px;
-  --maxw: 960px;
+  --maxw: 1580px;
 }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -51,3 +51,48 @@ footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 
   border:1px solid rgba(96,165,250,.3); color: var(--accent); font-size: 12px; }
 .list { display:flex; flex-wrap: wrap; gap: 8px 12px; padding:0; margin:0; list-style:none; }
 .list li { color: var(--muted); }
+.vlist {list-style: none;padding: 0;margin: 0;} 
+.vlist li + li {margin-top: 8px;}
+.links-list li a {display: flex;align-items: center;gap: 10px;}
+.links-list svg {width: 18px; height: 18px;flex: 0 0 18px;}
+.links-list li + li {margin-top: 8px}
+.card p {text-align: justify;}
+.edu-logo-top {display: flex;justify-content: center;margin-bottom: 16px;}
+.edu-logo {width: 250px;height: 85px;object-fit: contain;filter: brightness(0) invert(1);opacity: 0.9;background: none; border: none;border-radius: 0; padding: 6px;   }
+.about-profile {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;   
+  justify-content: space-between;
+}
+
+.about-profile-text {
+  flex: 1 1 auto;            
+  min-width: 0;
+}
+
+.about-profile-photo {
+  flex: 0 0 auto;
+}
+
+.about-photo {
+  width: 200px;            
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  background: #0b0d12;
+}
+
+
+@media (max-width: 720px) {
+  .about-profile {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .about-photo {
+    width: 110px;
+    height: 110px;
+  }
+}
