@@ -20,7 +20,7 @@ export const content = {
         "English (fluent) - TOEFL B2",
         "German (basic) - Goethe Zertifikat A2"
       ],
-      images: ["/profile/profile-1.png", "/profile/profile-3.png", "/profile/profile-2.png", "/profile/profile-4.png"],
+      images: ["/profile/profile-3.png", "/profile/profile-1.png", "/profile/profile-2.png", "/profile/profile-4.png"],
     },
     
   },
