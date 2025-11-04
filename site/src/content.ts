@@ -19,8 +19,10 @@ export const content = {
         "Spanish (native)",
         "English (fluent) - TOEFL B2",
         "German (basic) - Goethe Zertifikat A2"
-      ]
+      ],
+      images: ["/profile/profile-1.png", "/profile/profile-3.png", "/profile/profile-2.png", "/profile/profile-4.png"],
     },
+    
   },
 
   skills: {
@@ -80,6 +82,7 @@ export const content = {
           "Used 3D graphics / animation / rendering software through script-based control to ensure robust and reproducible CAD modelling workflows.",
           "Identified CAD model parameters and analyzed their impact on pose estimation.",
         ],
+        images: ["/experience/zeiss-1.jpg"],
       },
       {
         role: "ZEISS – R&D Department (Internship)",
@@ -90,6 +93,7 @@ export const content = {
           "Script-based animation and rendering control to keep the pipeline reproducible.",
           "Analyzed how model changes affect tracking accuracy and robustness.",
           "Evaluated object-model parameter changes to improve tracking performance.",
+          
         ],
       },
       {
@@ -101,6 +105,7 @@ export const content = {
           "Final routine: automated room mapping with LiDAR, autonomous navigation and camera-based color recognition.",
           "Integrated image processing in the same routine to demonstrate a multi-step autonomous task.",
         ],
+        images: ["/experience/LIMO-1.png", "/experience/LIMO-2.png", "/experience/LIMO-3.png"],
       },
       {
         role: "Tec de Monterrey and MIT - Production line workstation automation",
@@ -113,6 +118,7 @@ export const content = {
           "Designed workbench and fixtures for the cell.",
           "Planned and optimized the operator–robot routine.",
         ],
+        images: ["/experience/MIT-1.png","/experience/MIT-2.png","/experience/MIT-3.png"],
       },
       {
         role: "PremiertTech - Digital twin & simulation",
@@ -124,6 +130,7 @@ export const content = {
           "Designed fixtures and generated G-code for CNC machining.",
           "Implemented PLC programming for the cell.",
         ],
+        images: ["/experience/PremiertTech-1.png","/experience/PremiertTech-2.png","/experience/PremiertTech-3.png","/experience/PremiertTech-4.png","/experience/PremiertTech-5.png","/experience/PremiertTech-6.png"],
       },
       {
         role: "John Deere - LabVIEW control system prototype",

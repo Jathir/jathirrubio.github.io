@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero"
 import { Section } from "./components/Section"
 import { Card } from "./components/Card"
 import { Tag } from "./components/Tag"
+import { ImageCarousel } from "./components/ImageCarousel"
 import { content } from "./content"
 
 import tecLogo from "./assets/tec.svg"
@@ -49,7 +50,11 @@ export default function App() {
                 </div>
 
                 <div className="about-profile-photo">
-                  <img src={profilePhoto} alt="Photo of Jathir Rubio" className="about-photo" />
+                  <ImageCarousel
+                    className="about"
+                    images={(content.about.profile as any).images?.length ? (content.about.profile as any).images : [profilePhoto]}
+                    alt="Photo of Jathir Rubio"
+                  />
                 </div>
               </div>
             </Card>
@@ -91,7 +96,9 @@ export default function App() {
           <div className="grid">
             {content.experience.items.map((exp) => (
               <Card key={exp.role + exp.period}>
-                <h3>{exp.role}</h3>
+                <div className="exp-row">
+                <div className="exp-text">
+                  <h3>{exp.role}</h3>
                 <p className="meta">
                   {exp.place} · {exp.period}
                 </p>
@@ -100,6 +107,13 @@ export default function App() {
                     <li key={b}>{b}</li>
                   ))}
                 </ul>
+                </div>
+                {Array.isArray((exp as any).images) && (exp as any).images.length > 0 ? (
+                  <div className="exp-media">
+                    <ImageCarousel images={(exp as any).images} alt={`${exp.role} media`} />
+                  </div>
+                ) : null}
+                </div>
               </Card>
             ))}
           </div>
