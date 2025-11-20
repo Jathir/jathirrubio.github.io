@@ -6,6 +6,10 @@ type TimelineItem = {
   description: string
 }
 
+/**
+ * Timeline lists chronological achievements inside a card, useful for compact
+ * histories such as awards or condensed experience.
+ */
 export function Timeline({ items }: { items: TimelineItem[] }) {
   return (
     <div className="card">

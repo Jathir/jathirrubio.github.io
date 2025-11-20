@@ -11,7 +11,12 @@ import tecLogo from "./assets/tec.svg"
 import hszgLogo from "./assets/hszg.png"
 import profilePhoto from "./assets/profile.png"
 
+/**
+ * App composes every section of the single page resume using shared
+ * components and data pulled from `content`.
+ */
 const contact = content.contact as typeof content.contact & { cv?: string }
+// Fallback to bundling `cv.pdf` if a custom contact.cv path is not present.
 const cvHref = `${import.meta.env.BASE_URL}${contact.cv ?? "cv.pdf"}`
 
 export default function App() {

@@ -1,5 +1,5 @@
 // src/components/Section.tsx
-import type{ ReactNode } from "react"
+import type { ReactNode } from "react"
 
 type SectionProps = {
   id: string
@@ -8,6 +8,10 @@ type SectionProps = {
   children: ReactNode
 }
 
+/**
+ * Section wraps each major resume area with consistent spacing and anchors
+ * so the navbar can link to them.
+ */
 export function Section({ id, title, subtitle, children }: SectionProps) {
   return (
     <section id={id} className="section">

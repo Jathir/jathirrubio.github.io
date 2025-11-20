@@ -12,6 +12,10 @@ const NAV_ITEMS: NavItem[] = [
   { label: "contact", href: "#contact" },
 ]
 
+/**
+ * Navbar renders the top navigation bar with in-page anchors and a link to the CV.
+ * Items are static for now but could be generated from the sections list.
+ */
 export function Navbar() {
   return (
     <header className="nav" aria-label="Main navigation">

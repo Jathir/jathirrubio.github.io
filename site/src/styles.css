@@ -1,3 +1,4 @@
+/* GLOBAL THEME TOKENS */
 :root {
   --bg: #0b0d12;
   --card: #0f131a;
@@ -9,6 +10,7 @@
   --radius: 18px;
   --maxw: 1580px;
 }
+/* BASE ELEMENTS */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 html { scroll-behavior: smooth; }
@@ -20,33 +22,48 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
+/* GLOBAL LINKS & WRAPPER */
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* NAVIGATION BAR */
 .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(160%) blur(8px);
   background: rgba(11,13,18,.6); border-bottom: 1px solid rgba(255,255,255,.06); }
 .nav-inner { display:flex; align-items:center; justify-content:space-between; height:64px; }
 .brand { font-weight:700; letter-spacing:.2px; }
 .nav ul { list-style:none; display:flex; gap:18px; padding:0; margin:0; }
 .nav a { color: var(--text); opacity:.9; }
+
+/* HERO SECTION */
 .hero { padding: 72px 0 48px; }
 .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height:1.15; margin:0 0 12px; }
 .hero p { color: var(--muted); margin: 0 0 22px; }
 .hero-cta { display:flex; gap:12px; flex-wrap:wrap; }
+
+/* BUTTON STYLES */
 .btn { display:inline-flex; align-items:center; gap:10px; padding:11px 16px; border-radius: 12px;
   border:1px solid rgba(255,255,255,.09);
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); color: var(--text); box-shadow: var(--shadow); }
 .btn.primary { background: linear-gradient(180deg, rgba(96,165,250,.25), rgba(96,165,250,.15)); border-color: rgba(96,165,250,.35); }
+
+/* GRID & CARD SYSTEM */
 .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
 .card { grid-column: span 12; background: var(--card); border:1px solid rgba(255,255,255,.06);
   border-radius: var(--radius); padding:20px; box-shadow: var(--shadow); }
 .card h3 { margin: 0 0 6px; font-size: 18px; }
 .card p { margin: 0; color: var(--muted); }
 @media (min-width: 720px) { .card.half { grid-column: span 6; } }
+
+/* SECTION HEADINGS */
 .section { padding: 26px 0 18px; }
 .section h2 { font-size: 22px; letter-spacing:.2px; margin: 0 0 10px; }
 .section .sub { color: var(--muted); margin-top: 0; }
+
+/* FOOTER */
 footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 18px 0 48px; color: var(--muted); }
+
+/* UTILITY TAGS & LISTS */
 .pill { display:inline-block; padding:4px 10px; border-radius: 999px; background: rgba(96,165,250,.12);
   border:1px solid rgba(96,165,250,.3); color: var(--accent); font-size: 12px; }
 .list { display:flex; flex-wrap: wrap; gap: 8px 12px; padding:0; margin:0; list-style:none; }
@@ -57,8 +74,12 @@ footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 
 .links-list svg {width: 18px; height: 18px;flex: 0 0 18px;}
 .links-list li + li {margin-top: 8px}
 .card p {text-align: justify;}
+
+/* EDUCATION LOGOS */
 .edu-logo-top {display: flex;justify-content: center;margin-bottom: 16px;}
 .edu-logo {width: 250px;height: 85px;object-fit: contain;filter: brightness(0) invert(1);opacity: 0.9;background: none; border: none;border-radius: 0; padding: 6px;   }
+
+/* ABOUT PROFILE LAYOUT */
 .about-profile {
   display: flex;
   gap: 18px;
@@ -86,6 +107,7 @@ footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 
 }
 
 
+/* ABOUT PROFILE MOBILE */
 @media (max-width: 720px) {
   .about-profile {
     flex-direction: column-reverse;
@@ -97,11 +119,12 @@ footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 
   }
 }
 
-/* Experience card: text + right-side images */
+/* EXPERIENCE CARD WITH MEDIA */
 .exp-row { display:flex; gap:18px; align-items: stretch; }
 .exp-text { flex: 1 1 auto; min-width: 0; }
 .exp-media { flex: 0 0 260px; }
 
+/* CAROUSEL */
 .carousel { position: relative; width: 100%; height: 170px; border-radius: 14px;
   border:1px solid rgba(255,255,255,.06); overflow:hidden; background: #0b0d12;
   box-shadow: var(--shadow); display:flex; align-items:center; justify-content:center; }
@@ -114,13 +137,14 @@ footer { border-top:1px solid rgba(255,255,255,.06); margin-top: 40px; padding: 
   box-shadow: var(--shadow); }
 .carousel-btn:hover { background: linear-gradient(180deg, rgba(96,165,250,.25), rgba(96,165,250,.12)); border-color: rgba(96,165,250,.35); }
 
+/* EXPERIENCE RESPONSIVE BEHAVIOR */
 @media (max-width: 920px) {
   .exp-row { flex-direction: column; }
   .exp-media { flex: 0 0 auto; }
   .carousel { height: 200px; }
 }
 
-/* About profile specific size (keep previous photo dimensions) */
+/* ABOUT-PROFILE CAROUSEL SIZE */
 .carousel.about { width: 200px; height: 200px; border-radius: 18px; }
 @media (max-width: 720px) {
   .carousel.about { width: 110px; height: 110px; }

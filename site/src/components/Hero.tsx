@@ -1,6 +1,9 @@
 // src/components/Hero.tsx
 import { content } from "../content"
 
+/**
+ * Hero displays the landing headline and dual CTA buttons sourced from `content.hero`.
+ */
 export function Hero() {
   const { title, subtitle, ctaPrimary, ctaSecondary } = content.hero
 

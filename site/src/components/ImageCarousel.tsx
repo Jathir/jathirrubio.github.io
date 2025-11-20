@@ -7,6 +7,10 @@ type ImageCarouselProps = {
   className?: string
 }
 
+/**
+ * Normalize relative asset paths to respect Vite's base URL during local build
+ * and GitHub Pages deployment.
+ */
 function resolveSrc(p: string) {
   if (/^https?:\/\//i.test(p)) return p
   const base = (import.meta as any).env?.BASE_URL ?? "/"
@@ -15,6 +19,9 @@ function resolveSrc(p: string) {
   return `${base}${cleaned}`
 }
 
+/**
+ * ImageCarousel cycles through a set of images with accessible controls.
+ */
 export function ImageCarousel({ images, alt = "", className }: ImageCarouselProps) {
   const [index, setIndex] = useState(0)
 

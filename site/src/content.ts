@@ -1,12 +1,17 @@
 // src/content.ts
+/**
+ * Structured copy for the portfolio. Each top-level key feeds a section in
+ * `App`, so updating resume information is centralized here.
+ */
 export const content = {
+  // Landing hero data consumed by <Hero />.
   hero: {
     title: "Jose Jathir Rubio Delgado",
     subtitle: "Mechatronics engineer focused on coding, industrial automation, robotics and CAD-based digital twins.",
     ctaPrimary: { label: "View experience", href: "#experience" },
     ctaSecondary: { label: "Download CV", href: "./cv.pdf" },
   },
-
+  // Narrative overview + profile data for the About cards.
   about: {
     title: "About",
     subtitle: "",
@@ -24,7 +29,7 @@ export const content = {
     },
     
   },
-
+  // Skill taxonomy split into software, hardware and supporting tags.
   skills: {
     title: "Skills & Tech",
     subtitle: "",
@@ -50,7 +55,7 @@ export const content = {
       "In-Sight Explorer",
     ],
   },
-
+  // Side projects rendered under the Projects section.
   projects: {
     title: "Additional projects",
     subtitle: "Personal and side projects complementary to academic and industry work.",
@@ -68,7 +73,7 @@ export const content = {
     ],
   },
 
-
+  // Professional and academic experience cards plus optional carousels.
   experience: {
     title: "Experience",
     subtitle: "",
@@ -144,7 +149,7 @@ export const content = {
       },
     ],
   },
-
+  // Formal education history for the Education grid.
   education: {
     title: "Education",
     subtitle: "",
@@ -164,7 +169,7 @@ export const content = {
       },
     ],
   },
-
+  // Awards and memberships list.
   awards: {
     title: "Awards & Memberships",
     subtitle: "",
@@ -173,7 +178,7 @@ export const content = {
       "50% Scholarship for academic talent (2020–2025).",
     ],
   },
-
+  // Certifications grouped as a simple bullet list.
   certifications: {
     title: "Certifications",
     subtitle: "",
@@ -186,7 +191,7 @@ export const content = {
       "LabVIEW and Arduino Application Programming (Udemy, 2022).",
     ],
   },
-
+  // General contact information + optional `cv` override used in App.tsx.
   contact: {
     title: "Contact",
     subtitle: "",

@@ -7,6 +7,10 @@ type CardProps = {
   children: ReactNode
 }
 
+/**
+ * Card provides consistent visual framing for content blocks and can shrink
+ * to half-width when used inside CSS grids.
+ */
 export function Card({ title, variant = "full", children }: CardProps) {
   const cls = variant === "half" ? "card half" : "card"
   return (
